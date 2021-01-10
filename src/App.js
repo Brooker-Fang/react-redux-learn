@@ -1,8 +1,8 @@
-
+import Counter from './view/Counter'
 function App() {
   return (
     <div className="App">
-      app
+      <Counter></Counter>
     </div>
   );
 }
