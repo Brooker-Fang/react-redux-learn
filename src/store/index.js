@@ -1,4 +1,8 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import reducer from './reducers'
+import loggerMid from './middleware/logger'
+import testMidWare from './middleware/test'
+
+// applyMiddleware(loggerMid, testMidWare) 按顺序 查询
 // 创建 仓库
-export const store = createStore(reducer)
+export const store = createStore(reducer, applyMiddleware(loggerMid, testMidWare))
