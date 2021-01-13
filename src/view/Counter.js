@@ -4,9 +4,9 @@ import { bindActionCreators } from 'redux'
 import * as counterActions from '../store/actions/counter.action'
 import * as modelActions from '../store/actions/model.actions'
 
-function Counter({increment, decrement, count, show, changeModel}) {
+function Counter({increment, increment_async, decrement, count, show, changeModel}) {
   return (<div>
-    <button onClick={() => increment(5)}>+</button>
+    <button onClick={() => increment_async(5)}>+</button>
     {count}
     <button onClick={() => decrement(3)}>-</button>
     {show ? 'true' : 'false'}
