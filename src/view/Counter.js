@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as counterActions from '../store/actions/counter.action'
+import * as counterActions from '../store/actions/counter.actions'
 import * as modelActions from '../store/actions/model.actions'
 
 function Counter({increment, increment_async, decrement, count, show, changeModel}) {
