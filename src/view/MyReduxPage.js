@@ -19,8 +19,11 @@ export class MyReduxPage extends Component {
 
   asyncAdd = () => {
     store.dispatch((dispatch, getState) => {
-      setTimeout(() => dispatch({type: 'ADD'}), 1000)
+      setTimeout(() => dispatch({type: 'ADD', payload: 1}), 1000)
     })
+  }
+  promiseAdd = () => {
+    store.dispatch(Promise.resolve({type: 'ADD', payload: 1}))
   }
   render() {
     return (
@@ -29,6 +32,7 @@ export class MyReduxPage extends Component {
         <div>store === {store.getState()}</div>
         <button onClick={this.add}>Add</button>
         <button onClick={this.asyncAdd}>asyncAdd</button>
+        <button onClick={this.promiseAdd}>promiseAdd</button>
       </div>
     )
   }

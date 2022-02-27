@@ -17,9 +17,7 @@ function compose(...funcs) {
       getState: store.getState,
       dispatch: (action, ...args) => dispatch(action, ...args)
     }
-    const middlewaresChain = middlewares.map(middleware => {
-      return middleware(middlewaresParams)
-    })
+    const middlewaresChain = middlewares.map(middleware => middleware(middlewaresParams))
 
     // 遍历执行中间件函数
     dispatch = compose(...middlewaresChain)(store.dispatch)

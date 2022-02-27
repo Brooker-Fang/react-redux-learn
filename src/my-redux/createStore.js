@@ -21,7 +21,7 @@ export default function createStore(reducer, enhancer) {
     currentListener.push(listener)
     // 返回取消订阅函数
     return () => {
-      const index = currentListener.findIndex()
+      const index = currentListener.findIndex(listener)
       currentListener.splice(index, 1)
     }
   }
