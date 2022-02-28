@@ -29,7 +29,7 @@ export class MyReduxPage extends Component {
     return (
       <div>
         <h3>MyReduxPage</h3>
-        <div>store === {store.getState()}</div>
+        <div>store === {store.getState().count}</div>
         <button onClick={this.add}>Add</button>
         <button onClick={this.asyncAdd}>asyncAdd</button>
         <button onClick={this.promiseAdd}>promiseAdd</button>
