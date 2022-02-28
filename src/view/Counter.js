@@ -26,6 +26,17 @@ const mapStateToProps = (state) => {
     decrement: () => dispatch({type: 'decrement', payload: 3})
   }
 } */
+/* 
+  bindActionCreators 作用：
+  将对象 actions = {
+    increment: (payload) => ({ type: INCREMENT, payload }),
+    decrement：(payload) => ({ type: INCREMENT, payload })
+  } 转变为
+   actions = {
+    increment: (payload) => dispatch({ type: INCREMENT, payload }),
+    decrement：(payload) => dispatch({ type: INCREMENT, payload })
+  }
+*/
 const mapDispatchToProps = (dispatch) => bindActionCreators({...counterActions, ...modelActions}, dispatch)
 /* 
   connect: connect()执行返回 新的函数，传入要接收store的组件,connect()(组件)
