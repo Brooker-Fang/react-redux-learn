@@ -8,7 +8,7 @@ export class ReactReduxPage extends Component {
     const {count, increment, decrement} = this.props
     return (
       <div>
-        <h3>MyReduxPage</h3>
+        <h3>ReactReduxPage</h3>
         <div>store.count === {count}</div>
         <button onClick={increment}>Add</button>
         <button onClick={decrement}>decrement</button>
