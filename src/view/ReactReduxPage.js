@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
+// import {connect} from 'react-redux'
 // import { bindActionCreators } from 'redux'
 import { bindActionCreators } from '../my-redux/bindActionCreators '
+import { connect } from '../my-redux/react-redux'
 export class ReactReduxPage extends Component {
   render() {
     const {count, increment, decrement} = this.props
